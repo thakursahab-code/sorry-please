@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Please Maaf Kar Do 🥺❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      max-width: 460px;
+      text-align: center;
+    }
+    h1 {
+      color: #ff4d6d;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    button {
+      margin-top: 12px;
+      padding: 12px 22px;
+      border: none;
+      border-radius: 30px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e63e5c;
+    }
+    .secondary {
+      background: #6c757d;
+    }
+    .secondary:hover {
+      background: #5a6268;
+    }
+    .hidden {
+      display: none;
+      margin-top: 15px;
+    }
+    .emoji {
+      font-size: 28px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Hey… Suno Na ❤️</h1>
+
+    <p>
+      Mujhe pata hai maine **World War 3** shuru kar di 💣  
+      Matter bada tha kl wala, bhot bada tha 😔
+    </p>
+
+    <p>
+      Koi excuse nahi.  
+      Bas ek sach:  
+      **tum mere liye sab kuch ho** ❤️
+    </p>
+
+    <button onclick="stage1()">Agar thoda sa bhi pighli ho 🫣</button>
+
+    <div id="stage1" class="hidden">
+      <p class="emoji">🥹🙏</p>
+      <p>
+        Main maanta hoon main sher hoon.  
+        Certified.   
+        Par dil se sirf tumhara 💖
+      </p>
+
+      <button onclick="stage2()">Theek hai, next 😐</button>
+      <button class="secondary" onclick="anger()">Abhi bhi gussa ho 😤</button>
+    </div>
+
+    <div id="anger" class="hidden">
+      <p class="emoji">😭💔</p>
+      <p>
+        Samajh sakta hoon…  
+        Main yahin hoon, bina bhaage,  
+        tumhara gussa jhelne ke liye.
+      </p>
+      <p>
+        Jab ready ho, upar wala button phir dabana ❤️
+      </p>
+    </div>
+
+    <div id="stage2" class="hidden">
+      <p class="emoji">😂❤️</p>
+      <p>
+        Main promise karta hoon:
+        <br>✔️ Zyada sununga  
+        <br>✔️ Ego kam, pyaar zyada  
+        <br>✔️ Tumhe kabhi lightly nahi lunga
+      </p>
+
+      <button onclick="finalStage()">Last screen… please 🥹</button>
+    </div>
+
+    <!-- FINAL SCREEN -->
+    <div id="final" class="hidden">
+      <p class="emoji">💍🫶</p>
+      <p>
+        Galti meri thi,  
+        par pyaar **100% sachcha** hai.
+      </p>
+
+      <p>
+        Ab decision tumhara ❤️
+      </p>
+
+      <button onclick="forgiven()">Yes, I forgive you ❤️</button>
+      <button class="secondary" onclick="tryHarder()">No, aur mehnat karo 😈</button>
+    </div>
+
+    <div id="happy" class="hidden">
+      <p class="emoji">🥹❤️🫂</p>
+      <p>
+        Thank you…  
+        Tumne mujhe phir se jeetna sikha diya.
+      </p>
+      <p>
+        I love you meri bachi.  
+        Aaj se thoda zyada responsible version 😌
+      </p>
+    </div>
+
+    <div id="harder" class="hidden">
+      <p class="emoji">💀😂</p>
+      <p>
+        Okay okay!  
+        Message samajh gaya 😭
+      </p>
+      <p>
+        Main aur effort launga,  
+        gussa, attention, ladai, pyaar — sab unlimited 🍫❤️
+      </p>
+      <p>
+        Ab bhi yahin hoon.  
+        Kahin nahi jaa raha 🫶
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    function stage1() {
+      document.getElementById("stage1").style.display = "block";
+    }
+    function stage2() {
+      document.getElementById("stage2").style.display = "block";
+      document.getElementById("anger").style.display = "none";
+    }
+    function anger() {
+      document.getElementById("anger").style.display = "block";
+    }
+    function finalStage() {
+      document.getElementById("final").style.display = "block";
+    }
+    function forgiven() {
+      document.getElementById("happy").style.display = "block";
+    }
+    function tryHarder() {
+      document.getElementById("harder").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
